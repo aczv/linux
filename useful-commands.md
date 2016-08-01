@@ -12,6 +12,28 @@ ssh-copy-id server1.example.com
 ssh-copy-id -i ~/keys/foo foo@server1.example.com
 ```
 
+### Install SSH public key manually
+
+https://www.digitalocean.com/community/tutorials/how-to-create-ssh-keys-with-putty-to-connect-to-a-vps
+
+If your SSH folder does not yet exist, create it:
+
+```
+mkdir ~/.ssh
+chmod 0700 ~/.ssh
+touch ~/.ssh/authorized_keys
+chmod 0644 ~/.ssh/authorized_keys
+```
+
+Paste the SSH public key into your ~/.ssh/authorized_keys file (see Installing and Using the Vim Text Editor on an Cloud Server):
+
+```
+sudo vim ~/.ssh/authorized_keys
+```
+
+Tap the i key on your keyboard & right-click your mouse to paste.
+To save, tap the following keys on your keyboard (in this order): Esc, :, w, q, Enter.
+
 ### Add a user to the www-data group
 
 ```
