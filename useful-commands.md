@@ -89,3 +89,9 @@ Print sizes in human readable format (e.g., 1K 234M 2G):
 du -sh ~/* |sort -hr
 ```
 
+## Empty Trash Folder
+
+```
+rm -rf ~/.local/share/Trash/*
+```
+
