@@ -77,3 +77,15 @@ apt-get install inxi
 time dd if=/dev/zero of=/tmp/test oflag=direct bs=64k count=16000
 ```
 
+## List directories by size
+
+```
+du -s ~/* |sort -nr
+```
+
+Print sizes in human readable format (e.g., 1K 234M 2G):
+
+```
+du -sh ~/* |sort -hr
+```
+
