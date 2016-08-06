@@ -21,13 +21,13 @@ Start PhpStorm from command line:
 /usr/local/bin/PhpStorm-162.1447.5/bin/phpstorm.sh
 ```
 
-When asked to import settings, choose 'I do not have previous version of PhpStorm'.
+When asked to import settings, choose *I do not have previous version of PhpStorm*.
 
-In the License Activation window choose Evaluate for free.
+In the License Activation window choose *Evaluate for free*.
 
-In PhpStorm Initial Configuration window leave 'create desktop entry' checkbox, and press OK.
+In PhpStorm Initial Configuration window leave *create desktop entry* checkbox, and press OK.
 
-Now close the PhpStorm and restart form the desktop launcher (press the `Windows` key,
+Now close the PhpStorm and restart form the desktop launcher (press the `Meta` key,
 type 'php', and then click on the PhpStorm icon).
 
 To import previously saved settings, open File | Import Settings, and choose a `settings.jar`
@@ -35,10 +35,9 @@ file that you have handy on disk.
 
 ## Inotify Watches Limit
 
-[inotify-limit]: https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit
+<https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit>
 
-To prevent [this situation][inotify-limit] it is recommended to increase the watches limit (to, say, 512K).
-You can do it by adding following line to the `/etc/sysctl.conf` file:
+To prevent this situation it is recommended to increase the watches limit (to, say, 512K). Add the following line to either /etc/sysctl.conf file or a new *.conf file (e.g. idea.conf) under /etc/sysctl.d/ directory:
 
 ```
 fs.inotify.max_user_watches = 524288
@@ -47,7 +46,7 @@ fs.inotify.max_user_watches = 524288
 Then run this command to apply the change:
 
 ```
-sudo sysctl -p
+sudo sysctl -p --system
 ```
 
 And don't forget to restart your IDE.
