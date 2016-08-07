@@ -95,3 +95,10 @@ du -sh ~/* |sort -hr
 rm -rf ~/.local/share/Trash/*
 ```
 
+## List processes
+
+```
+ps -f
+ps -ef
+```
+
