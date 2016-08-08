@@ -8,8 +8,6 @@ Docker Hub
 
 https://hub.docker.com/
 
-## Installation
-
 Install Docker
 
 https://docs.docker.com/engine/installation/linux/ubuntulinux/
