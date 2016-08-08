@@ -38,7 +38,7 @@ Provide a command to busybox
 
     docker run busybox echo "hello from busybox"
 
-Shows all containers that are currently running
+Shows also containers that are currently running
 
     docker ps
 
@@ -54,7 +54,7 @@ Automatically remove the container when it exits
 
     docker run -it --rm busybox sh
 
-If you have a bunch of containers to delete in one go
+Delete a bunch of containers in one go
 
     docker rm $(docker ps -a -q -f status=exited)
 
@@ -86,7 +86,7 @@ Create our own network
 
     docker network create foobar
 
-Inspect the `foobar` network
+Inspect the foobar network
 
-    docker network inspect bridge
+    docker network inspect foobar
 
