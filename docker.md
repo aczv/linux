@@ -90,3 +90,37 @@ Inspect the foobar network
 
     docker network inspect foobar
 
+## Backups
+
+If you’re using a data-container, it’s pretty trivial to do a backup:
+
+$ docker run --rm --volumes-from dbdata -v $(pwd):/backup debian tar cvf /backup/backup.tar /var/lib/postgresql/data
+
+## Remove orphan volumes
+
+You can use
+
+    docker volume ls -f dangling=true
+
+to find dangling volumes, and use
+
+    docker volume rm <volume name>
+
+to remove a volume that’s no longer needed.
+
+## Transfer a Docker image via SSH
+
+Transferring a Docker image via SSH, bzipping the content on the fly:
+
+```
+docker save <image> | bzip2 | \
+     ssh user@host 'bunzip2 | docker load'
+```
+
+It's also a good idea to put `pv` in the middle of the pipe to see how the transfer is going:
+
+```
+docker save <image> | bzip2 | pv | \
+     ssh user@host 'bunzip2 | docker load'
+```
+
