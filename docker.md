@@ -123,11 +123,18 @@ It's also a good idea to put `pv` in the middle of the pipe to see how the trans
 docker save <image> | bzip2 | pv | \
      ssh user@host 'bunzip2 | docker load'
 ```
+
 ## Docker Machine
 
-Create docker host on DigitalOcean:
+Create docker machine on DigitalOcean:
 
 ```
 export TOKEN=1212121212
 docker-machine create --driver digitalocean --digitalocean-access-token=$TOKEN --digitalocean-image=ubuntu-16-04-x64 --digitalocean-region=fra1 digi-03
+```
+
+Remove Docker Machine:
+
+```bash
+docker-machine rm -y digi-01
 ```
