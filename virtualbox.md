@@ -35,4 +35,29 @@ can be installed through the Synaptic Package manager or through the following c
 
     sudo apt-get install dkms
 
+# VBoxManage
+
+To get VM list
+
+```bash
+VBoxManage list vms
+```
+
+Tell if VM is running
+
+```bash
+VBoxManage showvminfo winxp|grep State
+```
+
+To safe shutdown vm use this command:
+
+```bash
+vboxmanage controlvm Ubuntu poweroff soft
+```
+This is equivalent to pulling the power plug on a real computer. You don't want to do this!
+Use the ACPI shutdown method (check the power management setting like Egil suggests) or maybe give the save state method (`savestate`) a try.
+
+```bash
+VBoxManage controlvm Ubuntu poweroff
+```
 
