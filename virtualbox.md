@@ -13,7 +13,7 @@ Add the following line:
 According to your distribution, replace 'vivid' by 'utopic', 'trusty', 'raring', 'quantal',
 'precise', 'lucid', 'jessie', 'wheezy', or 'squeeze'.
 
-(Up to version 3.2 the packages were located in the non-free section. Starting with 
+(Up to version 3.2 the packages were located in the non-free section. Starting with
 version 4.0 they are located in the contrib section.)
 
 ## The Oracle public key for apt-secure can be downloaded here:
@@ -28,9 +28,9 @@ version 4.0 they are located in the contrib section.)
 ## Install dkms
 
 Note: Ubuntu/Debian users might want to install the dkms package to ensure that the VirtualBox
-host kernel modules (vboxdrv, vboxnetflt and vboxnetadp) are properly updated if the linux 
-kernel version changes during the next apt-get upgrade. For Debian it is available in 
-Lenny backports and in the normal repository for Squeeze and later. The dkms package 
+host kernel modules (vboxdrv, vboxnetflt and vboxnetadp) are properly updated if the linux
+kernel version changes during the next apt-get upgrade. For Debian it is available in
+Lenny backports and in the normal repository for Squeeze and later. The dkms package
 can be installed through the Synaptic Package manager or through the following command:
 
     sudo apt-get install dkms
@@ -61,3 +61,8 @@ Use the ACPI shutdown method (check the power management setting like Egil sugge
 VBoxManage controlvm Ubuntu poweroff
 ```
 
+# TODO
+
+vboxmanage modifyvm winxp --autostart-enabled on
+vboxmanage modifyvm winxp --autostart-delay 30
+vboxmanage modifyvm winxp --autostop-type savestate
