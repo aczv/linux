@@ -1,7 +1,31 @@
+# Merge and split PDF files
 
+Download and install:
+
+- pdftk
+- pdfjam
+
+### Replace spaces to underscores in all files and directories
 
 ```bash
-for i in *.pdf; do pdfjam $i --a4paper --outfile out/$i; done
-pdftk a04*.pdf output ../final/all_04.pdf
+find input -type d | rename 's/\s+/_/g'
+find input -type f | rename 's/\s+/_/g'
 ```
 
+### Get a sorted list of all PDF files
+
+```bash
+find input -name "*.pdf" | sort > all.txt
+```
+
+### Resize all files to `A4`
+
+```bash
+for i in $(cat all.txt); do pdfjam $i --a4paper --outfile good/$i; done
+```
+
+### Merge all PDF files listed in `all.txt` into one
+
+```bash
+pdftk $(cat all.txt) output foobar.pdf
+```
