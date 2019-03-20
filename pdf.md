@@ -18,10 +18,11 @@ find input -type f | rename 's/\s+/_/g'
 find input -name "*.pdf" | sort > all.txt
 ```
 
-### Resize all files to `A4`
+### Resize multiple files to `A4`
 
 ```bash
 for i in $(cat all.txt); do pdfjam $i --a4paper --outfile good/$i; done
+for i in *.pdf; do pdfjam $i --a4paper --outfile out/$i; done
 ```
 
 ### Merge all PDF files listed in `all.txt` into one
