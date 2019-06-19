@@ -30,3 +30,9 @@ for i in *.pdf; do pdfjam $i --a4paper --outfile out/$i; done
 ```bash
 pdftk $(cat all.txt) output foobar.pdf
 ```
+
+### Shrink PDF
+
+```bash
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output-ebook.pdf input.pdf
+```
