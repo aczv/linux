@@ -1,10 +1,21 @@
-Prepare my new Linux for work.
+# Prepare my new Linux for work.
 
 ## Install Common Tools
 
 ```bash
 sudo apt install curl git htop mc net-tools
+
+# Install SSH server in Ubuntu
+sudo apt-get install openssh-server
+
+# Install CIFS utilities
+sudo apt-get install cifs-utils smbclient
 ```
+
+## Configure SSH client
+
+Edit `/etc/ssh/ssh_config` and comment out SendEnv LANG LC_* line.
+
 
 ## Configure Git
 
@@ -72,3 +83,10 @@ sudo apt-get update
 sudo apt-get install tlp tp-smapi-dkms
 ```
 
+## Ubuntu 20.04 won't boot on Lenovo T470 while in docking station
+
+https://askubuntu.com/questions/1230122/20-04-wont-boot-on-lenovo-t470-while-in-docking-station
+
+I have the same problem. My L450 does not boot while docked (ThinkPad Pro Dock 40A1), but it boots with disconnected additional monitor. All has worked while i disabled boot splash screen (GRUB_CMDLINE_LINUX_DEFAULT="nosplash" in /etc/default/grub).
+
+I can confirm that replacing line GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" with GRUB_CMDLINE_LINUX_DEFAULT="quiet nosplash" in /etc/default/grub fixed the issue. Also after editing need to execute update-grub.
