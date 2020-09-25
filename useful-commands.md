@@ -25,7 +25,7 @@ touch ~/.ssh/authorized_keys
 chmod 0644 ~/.ssh/authorized_keys
 ```
 
-Paste the SSH public key into your ~/.ssh/authorized_keys file (see Installing and Using the Vim Text Editor on an Cloud Server):
+Paste the SSH public key into your `~/.ssh/authorized_keys` file (see Installing and Using the Vim Text Editor on an Cloud Server):
 
 ```
 sudo vim ~/.ssh/authorized_keys
@@ -63,7 +63,7 @@ dd if=/dev/zero of=iotest bs=64k count=16k conv=fdatasync
 inxi -Fx
 ```
 
-inxi shows system hardware, CPU, drivers, Xorg, Desktop, Kernel, 
+inxi shows system hardware, CPU, drivers, Xorg, Desktop, Kernel,
 GCC version(s), Processes, RAM usage, and a wide variety of other useful information.
 Install inxi:
 
@@ -101,4 +101,3 @@ rm -rf ~/.local/share/Trash/*
 ps -f
 ps -ef
 ```
-
