@@ -154,3 +154,14 @@ sudo dpkg -i smartgit-20_1_5.deb
 sudo apt --fix-broken install
 
 ```
+
+## Install DBeaver
+
+https://dbeaver.io/download/
+
+```bash
+
+sudo dpkg -i dbeaver-ce_7.2.2_amd64.deb
+sudo apt --fix-broken install
+
+```
