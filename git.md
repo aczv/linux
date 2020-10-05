@@ -1,32 +1,20 @@
 ## Switch from Bitbucket to Github
 
-### Add Remote Repository
+```bash
 
-```
+# Add new remote repository
 git remote add github git@github.com:foo/bar.git
-```
 
-### Push
-
-```
+# Push to github
 git push --porcelain --progress --tags --recurse-submodules=check github refs/heads/master:refs/heads/master
-```
 
-### Set Tracked Branch
-
-```
+# Set Tracked Branch
 git branch --set-upstream-to=github/master master
-```
 
-### Delete Remote Repository
-
-```
+# Delete old remote Repository
 git remote rm origin
-```
 
-### Rename Remote Repository
-
-```
+# Rename new remote to 'origin'
 git remote rename github origin
-```
 
+```
