@@ -1,4 +1,4 @@
-# Prepare my new Linux for work.
+# My Ubuntu 20.04 Desktop
 
 ## Install common tools
 
