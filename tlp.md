@@ -2,6 +2,7 @@
 
 Advanced power management for Linux.
 
+https://linrunner.de/tlp/
 https://linrunner.de/tlp/introduction.html
 https://linrunner.de/tlp/installation/ubuntu.html
 
@@ -18,3 +19,7 @@ sudo apt-get install tlp acpi-call-dkms
 sudo apt-get update
 sudo apt-get install tlp tp-smapi-dkms
 ```
+
+### Advanced power management for Linux
+
+
