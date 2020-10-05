@@ -24,3 +24,6 @@
 - https://github.com/rocketeers/rocketeer
 - https://github.com/vimeo/vimeo.php
 
+## MikroTik Router Hardening
+
+https://www.manitonetworks.com/networking/2017/7/25/mikrotik-router-hardening
