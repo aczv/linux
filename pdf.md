@@ -27,6 +27,11 @@ pdftk $(cat all.txt) output foobar.pdf
 # Extract certain pages
 pdftk File0162.PDF cat 1-2 output out1.pdf
 
+# Pakeiti viena lapa vidury
+pdftk paraiska.PDF cat 1-2 output 12.pdf
+pdftk paraiska.PDF cat 4-31 output 4.pdf
+pdftk 12.pdf trecias.PDF 4.pdf output naujas.pdf
+
 ```
 
 ## pdfjam
