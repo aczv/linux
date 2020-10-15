@@ -165,3 +165,24 @@ sudo dpkg -i dbeaver-ce_7.2.2_amd64.deb
 sudo apt --fix-broken install
 
 ```
+
+## Install Node
+
+- https://github.com/nvm-sh/nvm#install--update-script
+- https://classic.yarnpkg.com/en/docs/install/#debian-stable
+- https://cli.vuejs.org/guide/installation.html
+
+```bash
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+
+# Install Yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
+
+# Install Vue CLI
+npm install -g @vue/cli
+
+```
