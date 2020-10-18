@@ -13,6 +13,12 @@ sudo apt-get install \
 
 Edit `/etc/ssh/ssh_config` and comment out SendEnv LANG LC_* line.
 
+## Alt-TAB messed up
+
+```bash
+sudo apt-get install compizconfig-settings-manager
+```
+
 ## Configure Git
 
 ```bash

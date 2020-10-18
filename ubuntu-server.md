@@ -46,6 +46,9 @@ rm -rf ~/.local/share/Trash/*
 ps -f
 ps -ef
 
+# Clear bash history
+cat /dev/null > ~/.bash_history && history -c && exit
+
 ```
 
 ## Inxi
