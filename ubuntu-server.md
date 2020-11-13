@@ -49,6 +49,16 @@ ps -ef
 # Clear bash history
 cat /dev/null > ~/.bash_history && history -c && exit
 
+# Create an SSH tunnel to remote PostgreSQL server
+# ssh -N -L SOURCE-PORT:127.0.0.1:DESTINATION-PORT -i KEYFILE bitnami@SERVER-IP
+ssh -N -L 5437:127.0.0.1:5432 192.168.24.4
+
+# Check open TCP and UDP ports:
+sudo lsof -i -P -n | grep LISTEN
+
+# PostgreSQL from Specific IP Address or Subnet
+sudo ufw allow from 192.168.21.0/24 to any port 5432
+
 ```
 
 ## Inxi
