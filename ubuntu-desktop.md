@@ -51,10 +51,10 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
-sudo apt-get install sublime-text
+sudo apt-get install sublime-text sublime-merge
 ```
 
-Preferences / Settings:
+### Preferences / Settings
 
 ```json
 {
@@ -74,8 +74,18 @@ Preferences / Settings:
 }
 ```
 
-Install Packages (CTRL+SHIFT+P):
+### Install Packages:
 
+https://packagecontrol.io/packages/
+
+First, install Package Control, by pressing (CTRL+SHIFT+P) and answering Yes.
+
+Then, press CTRL+SHIFT+P again, and select packages one by one:
+
+- Djaneiro
+- Pretty JSON
+- Sass
+- SideBarEnhancements
 - Vue Syntax Highlight
 
 ## Install Oh My Zsh
