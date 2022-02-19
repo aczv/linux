@@ -1,5 +1,5 @@
 #!/bin/sh
 set -e
 resolvectl dns tun0 192.168.3.9 192.168.3.10
-resolvectl domain tun0 "~snx.lt" "~snx.lv" "~snx.ee" "~sanitex.org"
+resolvectl domain tun0 "~snx.lt" "~snx.lv" "~snx.ee" "~sanitex.org" "~hcps.io"
 resolvectl dnssec tun0 off
